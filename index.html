@@ -210,3 +210,304 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agronomy by Vivek - Agro Vigyan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #1b5e20;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2e7d32;
+        }
+        textarea, input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .qr-section {
+            text-align: center;
+            background: #f1f8e9;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed #7cb342;
+            margin-bottom: 20px;
+        }
+        .qr-section img {
+            max-width: 180px;
+            height: auto;
+            margin-top: 10px;
+        }
+        .upi-id {
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        .submit-btn:hover {
+            background-color: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🌾 Agro Vigyan 🌾</h2>
+    <div class="subtitle">Agronomy by Vivek - फसल समाधान केंद्र</div>
+
+    <!-- समस्या लिखने का बॉक्स -->
+    <div class="form-group">
+        <label for="farmerProblem">💬 फसल की समस्या बताएं:</label>
+        <textarea id="farmerProblem" placeholder="यहाँ अपनी समस्या लिखकर या बोलकर बताएं (जैसे: धान में पत्तियां पीली पड़ रही हैं)..."></textarea>
+    </div>
+
+    <!-- फसल की फोटो अपलोड करने का विकल्प -->
+    <div class="form-group">
+        <label for="cropPhoto">📸 फसल की फोटो डालें:</label>
+        <input type="file" id="cropPhoto" accept="image/*">
+    </div>
+
+    <!-- परामर्श शुल्क और QR कोड -->
+    <div class="qr-section">
+        <label>💳 परामर्श शुल्क (₹50)</label>
+        <div class="upi-id">UPI ID: vk6397671378-1@okicici</div>
+        <!-- यहाँ आपका QR कोड इमेज लिंक या फाइल नाम रहेगा -->
+        <p style="font-size: 12px; color: #666; margin-top: 5px;">(पहले ₹50 स्कैन करके भेजें, फिर नीचे बटन दबाएं)</p>
+    </div>
+
+    <!-- WhatsApp पर भेजने वाला फाइनल बटन -->
+    <a href="#" id="whatsappBtn" onclick="sendToWhatsApp()" class="submit-btn">
+        ₹50 भेजें और WhatsApp पर सलाह पाएं
+    </a>
+</div>
+
+<script>
+function sendToWhatsApp() {
+    // किसान द्वारा लिखी गई समस्या को पढ़ना
+    var userInput = document.getElementById('farmerProblem').value;
+    
+    if(userInput.trim() === "") {
+        alert("कृपया पहले अपनी समस्या बॉक्स में लिखें या बोलकर दर्ज करें!");
+        return;
+    }
+
+    // आपका WhatsApp नंबर (देश के कोड के साथ)
+    var phoneNumber = "916397671378"; 
+    
+    // WhatsApp पर जाने वाला मैसेज फॉर्मेट
+    var message = "नमस्ते सर, मैंने ₹50 का भुगतान कर दिया है। मेरी फसल की समस्या यह है:\n\n" + userInput + "\n\n(इन्स्टाग्राम/वेबसाइट से आया हूँ)";
+    
+    // WhatsApp लिंक तैयार करना
+    var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+    
+    // यूजर को WhatsApp पर रीडायरेक्ट करना
+    this.href = whatsappURL;
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agronomy by Vivek - Agro Vigyan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #1b5e20;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2e7d32;
+        }
+        textarea, input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .qr-section {
+            text-align: center;
+            background: #f1f8e9;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed #7cb342;
+            margin-bottom: 20px;
+        }
+        .qr-section img {
+            max-width: 180px;
+            height: auto;
+            margin-top: 10px;
+        }
+        .upi-id {
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        .submit-btn:hover {
+            background-color: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🌾 Agro Vigyan 🌾</h2>
+    <div class="subtitle">Agronomy by Vivek - फसल समाधान केंद्र</div>
+
+    <!-- समस्या लिखने का बॉक्स -->
+    <div class="form-group">
+        <label for="farmerProblem">💬 फसल की समस्या बताएं:</label>
+        <textarea id="farmerProblem" placeholder="यहाँ अपनी समस्या लिखकर या बोलकर बताएं (जैसे: धान में पत्तियां पीली पड़ रही हैं)..."></textarea>
+    </div>
+
+    <!-- फसल की फोटो अपलोड करने का विकल्प -->
+    <div class="form-group">
+        <label for="cropPhoto">📸 फसल की फोटो डालें:</label>
+        <input type="file" id="cropPhoto" accept="image/*">
+    </div>
+
+    <!-- परामर्श शुल्क और QR कोड -->
+    <div class="qr-section">
+        <label>💳 परामर्श शुल्क (₹50)</label>
+        <div class="upi-id">UPI ID: vk6397671378-1@okicici</div>
+        <!-- यहाँ आपका QR कोड इमेज लिंक या फाइल नाम रहेगा -->
+        <p style="font-size: 12px; color: #666; margin-top: 5px;">(पहले ₹50 स्कैन करके भेजें, फिर नीचे बटन दबाएं)</p>
+    </div>
+
+    <!-- WhatsApp पर भेजने वाला फाइनल बटन -->
+    <a href="#" id="whatsappBtn" onclick="sendToWhatsApp()" class="submit-btn">
+        ₹50 भेजें और WhatsApp पर सलाह पाएं
+    </a>
+</div>
+
+<script>
+function sendToWhatsApp() {
+    // किसान द्वारा लिखी गई समस्या को पढ़ना
+    var userInput = document.getElementById('farmerProblem').value;
+    
+    if(userInput.trim() === "") {
+        alert("कृपया पहले अपनी समस्या बॉक्स में लिखें या बोलकर दर्ज करें!");
+        return;
+    }
+
+    // आपका WhatsApp नंबर (देश के कोड के साथ)
+    var phoneNumber = "916397671378"; 
+    
+    // WhatsApp पर जाने वाला मैसेज फॉर्मेट
+    var message = "नमस्ते सर, मैंने ₹50 का भुगतान कर दिया है। मेरी फसल की समस्या यह है:\n\n" + userInput + "\n\n(इन्स्टाग्राम/वेबसाइट से आया हूँ)";
+    
+    // WhatsApp लिंक तैयार करना
+    var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+    
+    // यूजर को WhatsApp पर रीडायरेक्ट करना
+    this.href = whatsappURL;
+}
+</script>
+
+</body>
+</html>
+
